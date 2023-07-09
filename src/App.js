@@ -10,7 +10,7 @@ function App() {
     
     <Switch>
       <Route path='/' exact>
-        {/* <Players /> */}
+        <Players />
         <Users />
       </Route>
       <Redirect to ='/' />
