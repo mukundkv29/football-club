@@ -15,6 +15,8 @@ function App() {
           <Players />
           <Users />
         </Route>
+        <Route path='/news' exact></Route>
+        <Route path='/fixtures' exact></Route>
         <Redirect to='/' />
       </Switch>
     </main>

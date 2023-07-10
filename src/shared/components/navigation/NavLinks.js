@@ -8,10 +8,10 @@ const NavLinks = () => {
             <NavLink to='/'>Players</NavLink>
         </li>
         <li>
-            <NavLink to='/'>News</NavLink>
+            <NavLink to='/news'>News</NavLink>
         </li>
         <li>
-            <NavLink to='/'>Fixtures</NavLink>
+            <NavLink to='/fixtures'>Fixtures</NavLink>
         </li>
     </ul>
   )
