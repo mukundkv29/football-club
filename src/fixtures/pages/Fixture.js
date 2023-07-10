@@ -19,6 +19,14 @@ const Fixture = () => {
             teamHome: 'MANCHESTER CITY',
             teamAway: 'MANCHESTER UNITED'
         },
+        {
+            id: 'LIVCITY',
+            date: '2023-09-12T15:30:00',
+            venue: 'ANFIELD STADIUM',
+            imageURL: 'https://backend.liverpoolfc.com/sites/default/files/styles/lg/public/acquiadam/2022-06/anfield-general-view-170622.webp?itok=J7kxIDw-&width=1680',
+            teamHome: 'LIVERPOOL',
+            teamAway: 'MANCHESTER CITY'
+        },
     ]
     return (
         <FixturesList items={FIXTURES} />

@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from '../../shared/components/UIElements/Card';
+import Button from '../../shared/components/FormElements/Button';
 
 import './FixtureItem.css'; 
 
@@ -15,8 +16,8 @@ const FixtureItem = props => {
                     <h3>{props.date}</h3>
                 </div>
                 <div className='place-item__actions'>
-                    <button>VIEW ON MAP</button>
-                    <button>BOOK TICKET</button>
+                    <Button inverse>VIEW ON MAP</Button>
+                    <Button to={`/book/${props.key}`}>BOOK TICKETS</Button>
                 </div>
             </Card>
         </li>
