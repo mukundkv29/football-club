@@ -6,7 +6,7 @@ import './FixturesList.css';
 
 const FixturesList = props => {
     return (
-        <ul className='fixture-list'>
+        <ul className='place-list'>
             {props.items.map(fix => <FixtureItem
                 key={fix.id}
                 date={fix.date}

@@ -7,7 +7,7 @@ const Fixture = () => {
             id: 'ARSCITY',
             date: '2023-08-10T15:00:00',
             venue: 'EMIRATES STADIUM',
-            imageURL: 'https://unsplash.com/photos/FiQS31ztg-Y',
+            imageURL: 'https://www.arsenal.com/sites/default/files/styles/link_image_extra_large/public/images/stadium1.jpg?auto=webp&itok=Z_R79dMW',
             teamHome: 'ARSENAL',
             teamAway: 'MANCHESTER CITY'
         },

@@ -10,7 +10,7 @@ const FixtureItem = props => {
                 <div className='place-item__image'>
                     <img src={props.imageURL} alt={props.venue} />
                 </div>
-                <div className='place-item__info'>
+                <div className='place-item__info'>  
                     <h2>{`${props.teamHome} vs ${props.teamAway}`}</h2>
                     <h3>{props.date}</h3>
                 </div>
