@@ -22,7 +22,6 @@ function App() {
         </Route>
         <Route path='/players' exact>
           <Players />
-          
         </Route>
         <Route path='/news' exact>
           <News />
