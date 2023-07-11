@@ -5,6 +5,9 @@ const NavLinks = () => {
   return (
     <ul className='nav-links'>
         <li>
+          <NavLink to='/'>Home</NavLink>
+        </li>
+        <li>
             <NavLink to='/players'>Players</NavLink>
         </li>
         <li>
