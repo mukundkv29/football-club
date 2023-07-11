@@ -5,6 +5,9 @@ import Button from '../../shared/components/FormElements/Button';
 import './FixtureItem.css'; 
 
 const FixtureItem = props => {
+    const fixtureDate = new Date(props.date);
+    const monthName = fixtureDate.toLocaleString('en-US', { month: 'long' });
+    const formattedDate = `${fixtureDate.getDate()} ${monthName} ${fixtureDate.getFullYear()}, ${fixtureDate.toLocaleTimeString()}`;
     return (
         <li className='place-item'>
             <Card className='place-item__content'>
@@ -13,7 +16,7 @@ const FixtureItem = props => {
                 </div>
                 <div className='place-item__info'>  
                     <h2>{`${props.teamHome} vs ${props.teamAway}`}</h2>
-                    <h3>{props.date}</h3>
+                    <h3>{formattedDate}</h3>
                 </div>
                 <div className='place-item__actions'>
                     <Button inverse>VIEW ON MAP</Button>
