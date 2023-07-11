@@ -4,25 +4,43 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 
 import { DUMMY_NEWS } from '../../data/dummy-news'
+import { DUMMY_FIXTURES } from '../../data/dummy-fixtures';
 
 import './Home.css'
 
 const Home = () => {
 
     const [newsIndex, setNewsIndex] = useState(0);
-    
-    const newsIndexHandler = () =>{
-        setNewsIndex( prevIndex => (prevIndex+1)%3 );
+    const [fixIndex, setFixIndex] = useState(0);
+
+    const newsIndexHandler = () => {
+        setNewsIndex(prevIndex => (prevIndex + 1) % 3);
+    }
+    const fixIndexHandler = () => {
+        setFixIndex(prevIndex => (prevIndex + 1) % 3);
     }
 
-    useEffect(()=>{
-        const timer = setInterval(()=>{
-            setNewsIndex(prevIndex=>(prevIndex+1)%3);
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setNewsIndex(prevIndex => (prevIndex + 1) % 3);
         }, 3500);
-        return ()=>{
+        return () => {
             clearInterval(timer);
         }
-    },[]);
+    }, []);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setFixIndex(prevIndex => (prevIndex + 1) % 3);
+        }, 3000);
+        return () => {
+            clearInterval(timer);
+        }
+    }, []);
+
+    const fixtureDate = new Date(DUMMY_FIXTURES[fixIndex].date);
+    const monthName = fixtureDate.toLocaleString('en-US', { month: 'long' });
+    const formattedDate = `${fixtureDate.getDate()} ${monthName} ${fixtureDate.getFullYear()}, ${fixtureDate.toLocaleTimeString()}`;
 
     return (
         <Container>
@@ -37,17 +55,21 @@ const Home = () => {
                         </Card.Body>
                         <Button variant='info' onClick={newsIndexHandler}>Next</Button>
                     </Card>
-                </Col>
+                </Col >
                 <Col sm={4}>
-                    {/* <Card>
-                        <Card.Img variant="top" src="https://react-bootstrap.netlify.app/img/logo.svg"/>
+                    <Card className="text-center" border='primary'>
+                        <Card.Header>Upcoming Fixtures</Card.Header>
                         <Card.Body>
+                            <Card.Title>{DUMMY_FIXTURES[fixIndex].teamHome}</Card.Title>
+                            
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                                VS
                             </Card.Text>
+                            <Card.Title>{DUMMY_FIXTURES[fixIndex].teamAway}</Card.Title>
+                            <Button variant="primary" onClick={fixIndexHandler}>Next Fixture</Button>
                         </Card.Body>
-                    </Card> */}
+                        <Card.Footer className="text-muted">{formattedDate}</Card.Footer>
+                    </Card>
                 </Col>
             </Row>
         </Container>
