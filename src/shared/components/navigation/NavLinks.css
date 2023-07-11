@@ -25,15 +25,15 @@
 .nav-links a:active,
 .nav-links a.active {
   background: #001838;
-  border-color: #292929;
+  border-color: #001838;
   color: white;
   border-radius: 10%;
 }
 
 .nav-links button {
   cursor: pointer;
-  border: 1px solid #292929;
-  color: #292929;
+  border: 1px solid #001838;
+  color: #001838;
   background: transparent;
   padding: 0.5rem;
   font: inherit;
@@ -45,7 +45,7 @@
 
 .nav-links button:hover,
 .nav-links button:active {
-  background: #292929;
+  background: #001838;
   color: white;
 }
 
@@ -59,7 +59,7 @@
   }
 
   .nav-links a {
-    color: white;
+    color: #001838;
     text-decoration: none;
   }
 
@@ -72,6 +72,6 @@
   .nav-links button:hover,
   .nav-links button:active {
     background: #f8df00;
-    color: #292929;
+    color: #001838;
   }
 }
