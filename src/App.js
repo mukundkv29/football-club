@@ -7,6 +7,9 @@ import Players from './player/pages/Players';
 import MainNavigation from './shared/components/navigation/MainNavigation';
 import Fixture from './fixtures/pages/Fixture';
 import News from './news/pages/News';
+import Home from './home/pages/Home';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -15,7 +18,7 @@ function App() {
     <main>
       <Switch>
         <Route path='/' exact>
-
+          <Home />
         </Route>
         <Route path='/players' exact>
           <Players />
