@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Figure } from 'react-bootstrap';
 
 
 import { DUMMY_NEWS } from '../../data/dummy-news'
@@ -60,12 +60,26 @@ const Home = () => {
                     <Card className="text-center" border='primary'>
                         <Card.Header>Upcoming Fixtures</Card.Header>
                         <Card.Body>
-                            <Card.Title>{DUMMY_FIXTURES[fixIndex].teamHome}</Card.Title>
-                            
+                            <Card.Title>{DUMMY_FIXTURES[fixIndex].teamHome.team}</Card.Title>
+                            <Figure>
+                                <Figure.Image
+                                    width={50}
+                                    height={50}
+                                    alt={DUMMY_FIXTURES[fixIndex].teamHome.team}
+                                    src={DUMMY_FIXTURES[fixIndex].teamHome.logo}
+                                />
+                            </Figure>
                             <Card.Text>
                                 VS
                             </Card.Text>
-                            <Card.Title>{DUMMY_FIXTURES[fixIndex].teamAway}</Card.Title>
+                                <Figure.Image
+                                    width={50}
+                                    height={50}
+                                    alt={DUMMY_FIXTURES[fixIndex].teamAway.team}
+                                    src={DUMMY_FIXTURES[fixIndex].teamAway.logo}
+                                />
+                            <Card.Title>{DUMMY_FIXTURES[fixIndex].teamAway.team}</Card.Title>
+
                             <Button variant="primary" onClick={fixIndexHandler}>Next Fixture</Button>
                         </Card.Body>
                         <Card.Footer className="text-muted">{formattedDate}</Card.Footer>
