@@ -1,5 +1,7 @@
 import PlayerItem from "./PlayerItem";
 
+import './PlayersList.css';
+
 const PlayersList = props => {
     if (props.items.length === 0) {
         return (<div className="center">

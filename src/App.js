@@ -8,6 +8,7 @@ import MainNavigation from './shared/components/navigation/MainNavigation';
 import Fixture from './fixtures/pages/Fixture';
 import News from './news/pages/News';
 
+
 function App() {
   return <Router >
     <MainNavigation />
@@ -18,6 +19,7 @@ function App() {
         </Route>
         <Route path='/players' exact>
           <Players />
+          
         </Route>
         <Route path='/news' exact>
           <News />
