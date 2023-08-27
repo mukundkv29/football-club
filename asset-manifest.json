@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/football-club/static/css/main.52e34e91.css",
+    "main.js": "/football-club/static/js/main.4134ca47.js",
+    "index.html": "/football-club/index.html",
+    "main.52e34e91.css.map": "/football-club/static/css/main.52e34e91.css.map",
+    "main.4134ca47.js.map": "/football-club/static/js/main.4134ca47.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52e34e91.css",
+    "static/js/main.4134ca47.js"
+  ]
+}
